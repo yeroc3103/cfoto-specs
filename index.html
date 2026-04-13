@@ -16,8 +16,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#1e1e1e;--surface:#292929;--surface2:#333333;--border:rgba(255,255,255,.14);--border-focus:rgba(200,240,160,.45);--muted:rgba(255,255,255,.52);--dim:rgba(255,255,255,.70);--bright:rgba(255,255,255,.96);--accent:#c8f0a0;--accent-dim:rgba(200,240,160,.20);--danger:#ff6b6b;--radius:6px}
-*{margin:0;padding:0;box-sizing:border-box}
+:root:root {
+  /* Brightened Dark Theme */
+  --bg: #2c2c2c; 
+  --surface: #383838;
+  --surface2: #454545;
+  --border: rgba(255, 255, 255, 0.18);
+  --border-focus: rgba(200, 240, 160, 0.55);
+  --muted: rgba(255, 255, 255, 0.60);
+  --dim: rgba(255, 255, 255, 0.80);
+  --bright: #ffffff;
+  --accent: #c8f0a0;
+  --accent-dim: rgba(200, 240, 160, 0.25);
+  --danger: #ff6b6b;
+  --radius: 6px;
+}
 html{font-size:14px}
 body{background:var(--bg);color:var(--bright);font-family:'DM Mono',monospace;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:32px 16px 100px;gap:24px;-webkit-font-smoothing:antialiased}
 header{width:100%;max-width:520px;display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:16px}

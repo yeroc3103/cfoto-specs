@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e0e0e;--surface:#181818;--surface2:#212121;--border:rgba(255,255,255,.09);--border-focus:rgba(200,240,160,.35);--muted:rgba(255,255,255,.38);--dim:rgba(255,255,255,.58);--bright:rgba(255,255,255,.94);--accent:#c8f0a0;--accent-dim:rgba(200,240,160,.15);--danger:#ff6b6b;--radius:6px}
+:root{--bg:#141414;--surface:#1f1f1f;--surface2:#2a2a2a;--border:rgba(255,255,255,.12);--border-focus:rgba(200,240,160,.4);--muted:rgba(255,255,255,.45);--dim:rgba(255,255,255,.65);--bright:rgba(255,255,255,.95);--accent:#c8f0a0;--accent-dim:rgba(200,240,160,.18);--danger:#ff6b6b;--radius:6px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{font-size:14px}
 body{background:var(--bg);color:var(--bright);font-family:'DM Mono',monospace;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:32px 16px 100px;gap:24px;-webkit-font-smoothing:antialiased}
@@ -27,13 +27,13 @@ header{width:100%;max-width:520px;display:flex;align-items:baseline;justify-cont
 .panel-header{display:flex;align-items:center;gap:10px}
 .panel-num{font-size:9px;font-weight:500;color:var(--accent);letter-spacing:.15em;background:var(--accent-dim);padding:3px 8px;border-radius:3px}
 .panel-title{font-size:10px;letter-spacing:.18em;color:var(--muted)}
-.upload-zone{border:1px dashed rgba(255,255,255,.16);border-radius:var(--radius);padding:36px 20px;text-align:center;cursor:pointer;position:relative;transition:all .2s;overflow:hidden;background:var(--surface2)}
+.upload-zone{border:1px dashed rgba(255,255,255,.20);border-radius:var(--radius);padding:36px 20px;text-align:center;cursor:pointer;position:relative;transition:all .2s;overflow:hidden;background:var(--surface2)}
 .upload-zone:hover,.upload-zone.drag-over{border-color:var(--accent);background:rgba(200,240,160,.03)}
 .upload-zone.has-image{padding:0;border-style:solid}
 .upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.upload-icon{font-size:28px;opacity:.3;margin-bottom:8px}
+.upload-icon{font-size:28px;opacity:.45;margin-bottom:8px}
 .upload-text{font-size:11px;color:var(--muted);letter-spacing:.05em}
-.upload-hint{font-size:10px;color:rgba(255,255,255,.22);margin-top:6px}
+.upload-hint{font-size:10px;color:rgba(255,255,255,.30);margin-top:6px}
 .upload-preview{width:100%;max-height:220px;object-fit:cover;border-radius:5px;display:none}
 .exif-status{font-size:10px;letter-spacing:.06em;padding:6px 12px;border-radius:4px;display:none;align-items:center;gap:6px}
 .exif-status.success{display:flex;background:rgba(200,240,160,.08);color:var(--accent);border:1px solid rgba(200,240,160,.15)}
@@ -42,11 +42,11 @@ header{width:100%;max-width:520px;display:flex;align-items:baseline;justify-cont
 .field{display:flex;flex-direction:column;gap:6px}
 .field.full{grid-column:1/-1}
 label{font-size:9px;letter-spacing:.2em;color:var(--muted)}
-input[type="text"],select{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:4px;padding:10px 12px;color:var(--bright);font-family:'DM Mono',monospace;font-size:14px;font-weight:400;outline:none;transition:border-color .15s;width:100%}
+input[type="text"],select{background:rgba(255,255,255,.07);border:1px solid var(--border);border-radius:4px;padding:10px 12px;color:var(--bright);font-family:'DM Mono',monospace;font-size:14px;font-weight:400;outline:none;transition:border-color .15s;width:100%}
 input[type="text"]:focus,select:focus{border-color:var(--border-focus)}
-input::placeholder{color:rgba(255,255,255,.22)}
+input::placeholder{color:rgba(255,255,255,.28)}
 .slider-row{display:flex;align-items:center;gap:12px}
-input[type="range"]{flex:1;-webkit-appearance:none;height:2px;background:rgba(255,255,255,.1);border-radius:1px;outline:none}
+input[type="range"]{flex:1;-webkit-appearance:none;height:2px;background:rgba(255,255,255,.15);border-radius:1px;outline:none}
 input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid var(--bg)}
 .slider-val{font-size:12px;color:var(--dim);width:32px;text-align:right;font-variant-numeric:tabular-nums}
 .toggle-row{display:flex;gap:6px;flex-wrap:wrap}
@@ -76,7 +76,7 @@ button.share-btn:disabled{opacity:.25;cursor:default}
 <div class="panel">
   <div class="panel-header"><span class="panel-num">01</span><span class="panel-title">Image</span></div>
   <div class="upload-zone" id="uploadZone">
-    <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/tiff">
+    <input type="file" id="fileInput" accept="image/*">
     <div class="upload-icon" id="uploadIcon">&#9678;</div>
     <div class="upload-text" id="uploadText">Drop image or tap to browse</div>
     <div class="upload-hint" id="uploadHint">JPEG recommended — EXIF metadata auto-fills specs</div>

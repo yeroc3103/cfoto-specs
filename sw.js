@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cfoto-v3';
+const CACHE_NAME = 'cfoto-v4';
 const ASSETS = [
   './',
   './index.html',

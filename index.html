@@ -17,19 +17,24 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 :root:root {
-  /* Brightened Dark Theme */
-  --bg: #2c2c2c; 
-  --surface: #383838;
-  --surface2: #454545;
-  --border: rgba(255, 255, 255, 0.18);
-  --border-focus: rgba(200, 240, 160, 0.55);
-  --muted: rgba(255, 255, 255, 0.60);
-  --dim: rgba(255, 255, 255, 0.80);
-  --bright: #ffffff;
-  --accent: #c8f0a0;
-  --accent-dim: rgba(200, 240, 160, 0.25);
-  --danger: #ff6b6b;
+  /* Soft & Bright Low-Contrast Theme */
+  --bg: #383838;             /* Lifted to a softer mid-gray */
+  --surface: #444444;        /* Lighter panel background */
+  --surface2: #505050;       /* Lighter hover/upload zone */
+  --border: rgba(255, 255, 255, 0.10); /* More subtle borders */
+  --border-focus: rgba(200, 240, 160, 0.35);
+  
+  /* Text colors brought down from blinding white */
+  --muted: rgba(255, 255, 255, 0.40); 
+  --dim: rgba(255, 255, 255, 0.60);
+  --bright: rgba(255, 255, 255, 0.80); 
+  
+  /* Accents slightly desaturated so they don't pop too aggressively */
+  --accent: #b5d890;         
+  --accent-dim: rgba(181, 216, 144, 0.15);
+  --danger: #e86b6b;         
   --radius: 6px;
+} 6px;
 }
 html{font-size:14px}
 body{background:var(--bg);color:var(--bright);font-family:'DM Mono',monospace;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:32px 16px 100px;gap:24px;-webkit-font-smoothing:antialiased}
